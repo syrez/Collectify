@@ -2,9 +2,7 @@
 
 namespace Collectify\Model;
 
-use RedBeanPHP\SimpleModel;
-
-class Category extends SimpleModel{
+class Category extends BaseModel
+{
     public $name;
-    public $slug;
 }

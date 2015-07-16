@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../core/bootstrap.php';
+use RedBeanPHP\Facade as R;
 
-require "../vendor/autoload.php";
-$test = new \Collectify\Model\Category();
-var_dump($test);
+/**
+ * @var $item \Collectify\Model\Item
+ */
+$item = R::dispense('item');
+$item->title = "Mon title";
+R::store($item);
